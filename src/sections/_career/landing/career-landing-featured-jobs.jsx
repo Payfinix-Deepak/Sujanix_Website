@@ -31,16 +31,15 @@ export default function CareerLandingFeaturedJobs({ jobs }) {
           textAlign: { xs: 'center', md: 'unset' },
         }}
       >
-        <Grid xs={12} md={4}>
-          <Typography variant="overline" sx={{ color: 'text.disabled' }}>
-            Featured Jobs
+        {/* <Grid xs={12} md={4}>
+          <Typography variant="h3" sx={{ color: 'text.disabled' }}>
+            Open Positions
           </Typography>
-        </Grid>
+        </Grid> */}
 
-        <Grid xs={12} md={8}>
-          <Typography variant="h3">
-            Jobs available apply to Editorial Specialist, Account Manager, Human Resources
-            Specialist and more!
+        <Grid xs={12} md={12}>
+          <Typography variant="h3" sx={{textAlign:"center"}}>
+            Jobs available apply to FullStack Developer, Python Developer, FrontEnd Developer and more!
           </Typography>
         </Grid>
       </Grid>
@@ -63,7 +62,7 @@ export default function CareerLandingFeaturedJobs({ jobs }) {
         ))}
       </Box>
 
-      <Stack alignItems="center">
+      {/* <Stack alignItems="center">
         <Button
           component={RouterLink}
           href={paths.career.jobs}
@@ -74,7 +73,7 @@ export default function CareerLandingFeaturedJobs({ jobs }) {
         >
           View All Jobs
         </Button>
-      </Stack>
+      </Stack> */}
     </Container>
   );
 }

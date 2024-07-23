@@ -3,12 +3,9 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+
 import LoadingButton from '@mui/lab/LoadingButton';
 import FormHelperText from '@mui/material/FormHelperText';
-import ToggleButton, { toggleButtonClasses } from '@mui/material/ToggleButton';
-
-import { fCurrency } from 'src/utils/format-number';
 
 import { _tags } from 'src/_mock';
 
@@ -20,8 +17,7 @@ export default function MarketingContactForm() {
   const MarketingContactSchema = Yup.object().shape({
     services: Yup.array().required().min(1, 'Services field must have at least 1 items'),
     email: Yup.string().required('Email is required').email('That is not an email'),
-    compnany: Yup.string().required('Compnany is required'),
-    website: Yup.string().required('Website is required'),
+
   });
 
   const defaultValues = {
@@ -30,8 +26,7 @@ export default function MarketingContactForm() {
     lastName: '',
     email: '',
     phoneNumber: '',
-    compnany: '',
-    website: '',
+
     budget: [2000, 10000],
     message: '',
   };
@@ -71,7 +66,7 @@ export default function MarketingContactForm() {
           control={control}
           render={({ field, fieldState: { error } }) => (
             <div>
-              <Stack direction="row" flexWrap="wrap" spacing={1}>
+              {/* <Stack direction="row" flexWrap="wrap" spacing={1}>
                 {_tags.slice(0, 5).map((service) => (
                   <ToggleButton
                     {...field}
@@ -97,7 +92,7 @@ export default function MarketingContactForm() {
                     {service}
                   </ToggleButton>
                 ))}
-              </Stack>
+              </Stack> */}
 
               {!!error && (
                 <FormHelperText error sx={{ px: 2 }}>
@@ -120,7 +115,7 @@ export default function MarketingContactForm() {
         <RHFTextField name="email" label="Email" />
         <RHFTextField name="phoneNumber" label="Phone number" />
 
-        <Stack
+        {/* <Stack
           direction={{ xs: 'column', md: 'row' }}
           spacing={{ xs: 2.5, md: 2 }}
           sx={{ width: 1 }}
@@ -128,9 +123,9 @@ export default function MarketingContactForm() {
           <RHFTextField name="compnany" label="Compnany" />
 
           <RHFTextField name="website" label="Website" />
-        </Stack>
+        </Stack> */}
 
-        <Stack spacing={5} sx={{ py: 2, width: 1 }}>
+        {/* <Stack spacing={5} sx={{ py: 2, width: 1 }}>
           <Typography variant="overline" sx={{ color: 'text.disabled' }}>
             Your Budget
           </Typography>
@@ -142,7 +137,7 @@ export default function MarketingContactForm() {
             step={1000}
             valueLabelFormat={(value) => fCurrency(value)}
           />
-        </Stack>
+        </Stack> */}
 
         <RHFTextField name="message" label="Message" multiline rows={4} />
       </Stack>

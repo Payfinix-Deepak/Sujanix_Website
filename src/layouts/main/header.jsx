@@ -64,7 +64,9 @@ export default function Header({ headerOnDark }) {
         </Link>
       </Box> */}
       <img
-        style={{ width: '160px ', height: '50px',marginLeft:"-5rem"}}
+
+      
+        style={{ width: '160px ', height: '50px'}}
         src={sujanix_name}
         alt="logo"
       />

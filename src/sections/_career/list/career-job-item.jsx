@@ -40,14 +40,14 @@ export default function CareerJobItem({ job }) {
         },
       }}
     >
-      <Checkbox
+      {/* <Checkbox
         color="error"
         checked={favorite}
         onChange={handleChangeFavorite}
         icon={<Iconify icon="carbon:favorite" />}
         checkedIcon={<Iconify icon="carbon:favorite-filled" />}
         sx={{ position: 'absolute', right: 16, top: 16 }}
-      />
+      /> */}
 
       <Stack sx={{ p: 3, pb: 0 }}>
         <Stack direction="row" alignItems="center" spacing={2.5}>
@@ -61,15 +61,15 @@ export default function CareerJobItem({ job }) {
         </Stack>
 
         <Stack spacing={0.5} sx={{ mt: 3, mb: 2 }}>
-          <Link component={RouterLink} href={paths.career.job} color="inherit">
-            <TextMaxLine variant="h6" line={1}>
-              {slug}
-            </TextMaxLine>
-          </Link>
-
+          {/* <Link component={RouterLink}  color="inherit"> */}
+          <TextMaxLine variant="h6" line={1}>
+            {slug}
+          </TextMaxLine>
+          {/* </Link> */}
+          {/* 
           <Typography variant="body2" sx={{ color: 'info.main' }}>
             {company.name}
-          </Typography>
+          </Typography> */}
 
           <Stack
             direction="row"
@@ -86,9 +86,9 @@ export default function CareerJobItem({ job }) {
         </Typography>
       </Stack>
 
-      <Divider sx={{ borderStyle: 'dashed', my: 2 }} />
+      <Divider sx={{ my: 2 }} />
 
-      <Grid
+      {/* <Grid
         container
         spacing={1.5}
         sx={{
@@ -126,7 +126,7 @@ export default function CareerJobItem({ job }) {
             {level}
           </Stack>
         </Grid>
-      </Grid>
+      </Grid> */}
     </Card>
   );
 }

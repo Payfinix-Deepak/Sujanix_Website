@@ -64,8 +64,8 @@ export const ServiceLinks = [
     // cover: Solutions,
 
     items: [
-      { title: 'Crux', path: '' },
-      { title: 'TrueRead', path: '' },
+      { title: 'Crux', path: '/Sujanix/Crux' },
+      { title: 'TrueRead', path: '/Sujanix/TrueRead' },
       { title: 'Teamexell', path: '' },
       { title: 'Sujanix ERP', path: '' },
       { title: 'Sujanix Bank API Middleware', path: '' },
@@ -220,10 +220,10 @@ export const PrivacyLinks = [
 // ];
 
 export const navConfig3 = [
-  { title: 'Home', path: '/' },
+  { title: 'Home', path: '/Sujanix' },
   {
     title: 'About Us',
-    path: '',
+    path: '/Sujanix/About',
     //  children: [AboutLinks[0], AboutLinks[1]]
   },
   // {
@@ -247,7 +247,7 @@ export const navConfig3 = [
 
   { title: 'Case Studies', path: '' },
   { title: 'Resources', path: '', children: [ResourceLinks[0], ResourceLinks[1]] },
-  { title: 'Careers', path: '' },
-  { title: 'Contact Us', path: '' },
-  { title: 'Privacy Policy', path: '', children: [PrivacyLinks[0], PrivacyLinks[1]] },
+  { title: 'Careers', path: '/Sujanix/Career' },
+  { title: 'Contact Us', path: '/Sujanix/Contact' },
+  // { title: 'Privacy Policy', path: '', children: [PrivacyLinks[0], PrivacyLinks[1]] },
 ];

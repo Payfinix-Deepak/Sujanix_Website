@@ -24,8 +24,6 @@ export default function TravelLandingToursByCity({ tours }) {
 
   const viewAllBtn = (
     <Button
-      component={RouterLink}
-      href={paths.travel.tours}
       color="inherit"
       endIcon={<Iconify icon="carbon:chevron-right" />}
     >
@@ -38,6 +36,7 @@ export default function TravelLandingToursByCity({ tours }) {
       sx={{
         pt: { xs: 5, md: 10 },
         pb: 10,
+        marginTop: "-4rem"
       }}
     >
       <Stack
@@ -50,14 +49,13 @@ export default function TravelLandingToursByCity({ tours }) {
         }}
       >
         <Stack spacing={3}>
-          <Typography variant="h2">Tours By City</Typography>
+          <Typography variant="h2" sx={{ textAlign: "center" }}>Perks & Benefits</Typography>
 
-          <Typography sx={{ color: 'text.secondary' }}>
-            {`Our Featured Tours can help you find the trip that's perfect for you!`}
-          </Typography>
+          <Typography sx={{ color: 'text.secondary', textAlign: "center", fontFamily: "sans-serif", fontSize: "19px" }}>
+        By Offering Alluring Benefits, We Enhance Employee Experience and Engagement. Find Out How You Can Develop and Stay Well with Our All-Inclusive Package.          </Typography>
         </Stack>
 
-        {mdUp && viewAllBtn}
+        {/* {mdUp && viewAllBtn} */}
       </Stack>
 
       <Box
@@ -96,7 +94,7 @@ function TourItem({ tour }) {
   const { coverUrl, location } = tour;
 
   return (
-    <Link component={RouterLink} href={paths.travel.tour} color="inherit" underline="none">
+    <Link color="inherit" underline="none">
       <Paper
         variant="outlined"
         sx={{
@@ -114,13 +112,13 @@ function TourItem({ tour }) {
           <Avatar src={coverUrl} sx={{ width: 64, height: 64 }} />
 
           <Stack spacing={0.5}>
-            <TextMaxLine variant="h6" line={1}>
+            <TextMaxLine variant="h6" line={7}>
               {location}
             </TextMaxLine>
 
-            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+            {/* <Typography variant="body2" sx={{ color: 'text.secondary' }}>
               196 Place
-            </Typography>
+            </Typography> */}
           </Stack>
         </Stack>
       </Paper>

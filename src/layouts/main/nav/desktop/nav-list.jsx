@@ -71,13 +71,13 @@ export default function NavList({ data }) {
               onMouseEnter={handleOpenMenu}
               onMouseLeave={menuOpen.onFalse}
               sx={{
-                top: 72,
+                top: 62,
                 width: 1,
                 borderRadius: 0,
                 position: 'fixed',
                 bgcolor: 'background.default',
                 zIndex: (theme) => theme.zIndex.modal,
-                // boxShadow: (theme) => theme.customShadows.dialog,
+                boxShadow: (theme) => theme.customShadows.dialog,
               }}
             >
               <Grid container columns={9}>
@@ -85,7 +85,7 @@ export default function NavList({ data }) {
                   <Box
                     gap={5}
                     display="grid"
-                    gridTemplateColumns="repeat(4, 1fr)"
+                    gridTemplateColumns="repeat(3, 1fr)"
                     sx={{
                       p: 5,
                       height: 1,

@@ -6,52 +6,53 @@ import Typography from '@mui/material/Typography';
 
 import Image from 'src/components/image';
 import TextMaxLine from 'src/components/text-max-line';
+import { Button } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
 const CATEGORIES = [
   {
-    label: 'Men Clothes',
-    icon: '/assets/icons/ecommerce/ic_men_clothes.svg',
+    label: 'Python',
+    icon: 'https://cdn-icons-png.flaticon.com/128/5968/5968350.png',
     path: '#',
   },
   {
-    label: 'Women Clothes',
-    icon: '/assets/icons/ecommerce/ic_women_clothes.svg',
+    label: 'Java',
+    icon: 'https://cdn-icons-png.flaticon.com/128/5968/5968282.png',
     path: '#',
   },
   {
-    label: 'Watches',
-    icon: '/assets/icons/ecommerce/ic_watches.svg',
+    label: 'Javascript',
+    icon: 'https://cdn-icons-png.flaticon.com/128/1199/1199124.png  ',
     path: '#',
   },
   {
-    label: 'Home Appliances',
-    icon: '/assets/icons/ecommerce/ic_home_appliances.svg',
+    label: 'Swift',
+    icon: 'https://cdn-icons-png.flaticon.com/128/732/732250.png',
     path: '#',
   },
   {
-    label: 'Sport & Outdoor',
-    icon: '/assets/icons/ecommerce/ic_sport.svg',
+    label: 'Kotlin',
+    icon: 'https://www.capitalnumbers.com/images/pool-icon-home/kotlin-icon.svg',
     path: '#',
   },
   {
-    label: 'Books & Stationery',
-    icon: '/assets/icons/ecommerce/ic_book.svg',
+    label: 'Typescript',
+    icon: 'https://cdn-icons-png.flaticon.com/128/5968/5968381.png',
     path: '#',
   },
   {
-    label: 'Home & Living',
-    icon: '/assets/icons/ecommerce/ic_home_living.svg',
+    label: 'Node.js',
+    icon: 'https://cdn-icons-png.flaticon.com/128/5968/5968381.png',
     path: '#',
   },
-  { label: 'Health', icon: '/assets/icons/ecommerce/ic_health.svg', path: '#' },
-  { label: 'Mobile', icon: '/assets/icons/ecommerce/ic_mobile.svg', path: '#' },
-  { label: 'Laptop', icon: '/assets/icons/ecommerce/ic_laptop.svg', path: '#' },
-  { label: 'Tablet', icon: '/assets/icons/ecommerce/ic_tablet.svg', path: '#' },
+  { label: 'React.js', icon: 'https://www.capitalnumbers.com/images/pool-icon-home/react-icon.svg', path: '#' },
+  { label: 'Angular.js', icon: 'https://www.capitalnumbers.com/images/pool-icon-home/angular-icon.svg', path: '#' },
+  { label: 'Vue.js', icon: 'https://www.capitalnumbers.com/images/pool-icon-home/vue-js-icon.svg', path: '#' },
+  { label: 'Django', icon: 'https://cdn-icons-png.flaticon.com/128/9307/9307630.png', path: '#' },
   {
-    label: 'Headphones',
-    icon: '/assets/icons/ecommerce/ic_headphones.svg',
+    label: 'Laravel',
+    icon: 'https://www.capitalnumbers.com/images/pool-icon-home/laravel-icon.png',
     path: '#',
   },
 ];
@@ -62,7 +63,8 @@ export default function EcommerceLandingCategories() {
   return (
     <Container
       sx={{
-        py: { xs: 5, md: 8 },
+        pt: { xs: 15, md: 15 },
+        pb: { xs: 15, md: 15 },
       }}
     >
       <Typography
@@ -72,7 +74,16 @@ export default function EcommerceLandingCategories() {
           textAlign: { xs: 'center', md: 'unset' },
         }}
       >
-        Categories
+        <Stack sx={{ textAlign: "center" }} spacing={2}>
+          <Typography variant="h2">
+            Hire Experts in Today&apos;s Leading Technologies
+          </Typography>
+          <Typography sx={{ color: "text.secondary", fontSize: "19px", fontFamily: "sans-serif" }}>
+          Our team of skilled technologists possess a deep understanding of leading technologies. Unlock the potential of cutting-edge solutions and stay ahead with our unwavering commitment to your success.
+           Fuel innovation partner with our technology experts.
+          </Typography>
+
+        </Stack>
       </Typography>
 
       <Box
@@ -117,6 +128,11 @@ export default function EcommerceLandingCategories() {
           </Stack>
         ))}
       </Box>
+      {/* <Container style={{ textAlign: "center", marginTop: "2rem" }}>
+        <Button variant="contained" color="inherit" size="large" href='/HomeLanding/Contact'>
+          BOOK A CALL
+        </Button>
+      </Container> */}
     </Container>
   );
 }

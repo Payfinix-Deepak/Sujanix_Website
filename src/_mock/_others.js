@@ -120,6 +120,64 @@ export const _faqsAccess = [
   answer: generateDynamicAnswerAccess(index),
 }));
 
+
+const generateDynamicAnswerCrux = (index) => {
+  const _faqsCrux_answer = [
+    'MDM is a technology that companies use to secure, manage, and keep an eye on mobile devices including laptops, tablets, and smartphones. In order to guarantee data security and adherence to company regulations, it entails deploying, safeguarding, monitoring, and controlling mobile devices.',
+    'MDM is crucial because it facilitates safe access to corporate resources, protects confidential company information, guarantees regulatory compliance, boosts productivity by facilitating secure access, and makes managing numerous devices easier.',
+    'By implementing security measures like data encryption, password requirements, and remote wipe capabilities, MDM improves security. Additionally, it makes it possible to monitor device status and possible security risks in real time.',
+    ' Yes, by enforcing security regulations, keeping audit logs, and guaranteeing data privacy, MDM solutions can assist firms in adhering to a variety of legal obligations.',
+    'Enrolling and provisioning devices, enforcing policies, managing applications, encrypting data, wiping remotely, tracking locations, and live monitoring are typical features.',
+    ' Indeed, a lot of MDM systems facilitate Bring Your Own Device (BYOD) rules, which let you manage both personal and business-owned devices while maintaining data security and privacy.',
+    ' The complexity and scale of the organization affect how tough it is to implement. To make the deployment process simpler, the majority of contemporary MDM solutions provide support services and user-friendly interfaces.',
+    'By facilitating easy and safe access to company resources, MDM can improve user experience. To prevent interfering with user productivity, security measures and usability must be balanced.',
+  ];
+
+  return _faqsCrux_answer[index];
+};
+export const _faqsCrux = [
+  'What is Mobile Device Management (MDM)?',
+  'What makes Crux MDM crucial for companies?',
+  'How does mobile device security get improved with Crux MDM?',
+  'Is Crux MDM able to support regulatory compliance?',
+  'What characteristics do Crux MDM solutions usually have?',
+  'Can personal and company-owned devices be managed using Crux MDM?',
+  'How challenging is it to put an MDM system into practice?',
+  'How is the user experience impacted by Crux MDM?',
+].map((question, index) => ({
+  id: _mock.id(index),
+  question,
+  answer: generateDynamicAnswerCrux(index),
+}));
+
+
+
+const generateDynamicAnswerTru = (index) => {
+  const _faqsTru_answer = [
+    'Using an OCR tool called TrueRead, correct billing can be achieved without the need for manual data entry by using photos of electric meters to automatically read the meter values.',
+    'Users use the TrueRead app to snap a picture of their energy meter. The program extracts the meter reading from the picture and prepares it for invoicing using OCR technology.',
+    'You can use TrueRead on iOS and Android smartphones. For desktop users, a web application is another way to access it.',
+    ' Yes, compared to manual readings, TrueRead  very accurate readings are produced by utilizing cutting-edge OCR technology to reduce errors.',
+    'Make sure the photo captures the entire display clearly and that the meter is well-lit. For the best accuracy, stay away from reflections and shadows.',
+    ' Yes, a wide range of electric meter models and kinds are intended to be recognized and read by TrueRead.',
+    ' Assuring that all taken pictures and readings are processed and stored safely, TrueRead uses strong security protocols to safeguard user data.',
+  ];
+
+  return _faqsTru_answer[index];
+};
+export const _faqsTru = [
+  'What is TrueRead?',
+  'How does TrueRead work?',
+  'What devices are compatible with TrueRead?',
+  'Is TrueRead accurate?',
+  'How do I ensure the best results when taking meter images?',
+  'Can TrueRead handle different types of electric meters?',
+  'How does TrueRead handle data privacy?',
+].map((question, index) => ({
+  id: _mock.id(index),
+  question,
+  answer: generateDynamicAnswerTru(index),
+}));
 const generateDynamicAnswerGate = (index) => {
   const _faqsGate_answer = [
     'Onboarding made simple. Configure the Crux Gateway app, deploy it to macOS devices, and start your transition.',

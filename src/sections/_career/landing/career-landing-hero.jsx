@@ -206,9 +206,9 @@ export default function CareerLandingHero() {
         minHeight: { md: '100vh' },
       }}
     >
-      <Container>
-        <Grid container spacing={3} justifyContent="space-between">
-          <Grid xs={12} md={6} lg={5}>
+      <Container >
+        <Grid container spacing={3}  justifyContent="space-between">
+          <Grid xs={12} md={6} lg={6} sx={{marginTop:"5rem"}}>
             <Stack
               spacing={5}
               sx={{
@@ -217,24 +217,22 @@ export default function CareerLandingHero() {
             >
               <Stack spacing={3}>
                 <Typography variant="h1" sx={{ color: 'common.white' }}>
-                  Get The
+                  Stable, Rewarding Remote
                   <Box component="span" sx={{ color: 'primary.main' }}>
-                    {` Career `}
+                    {` Work `}
                   </Box>
-                  You Deserve
+                  Opportunities
                 </Typography>
 
-                <Typography sx={{ color: 'grey.500' }}>
-                  Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis
-                  venenatis ante odio sit amet eros.
-                </Typography>
+                <Typography sx={{ color: 'grey.500', fontFamily: "sans-serif", fontSize: "19px" }}>
+               We unlock your remote success and provide stable opportunities to grow. Connect to us to have a growing future ahead.                </Typography>
               </Stack>
 
-              {renderFilters}
+              {/* {renderFilters} */}
 
-              {renderBrands}
+              {/* {renderBrands}
 
-              {renderSummary}
+              {renderSummary} */}
             </Stack>
           </Grid>
 

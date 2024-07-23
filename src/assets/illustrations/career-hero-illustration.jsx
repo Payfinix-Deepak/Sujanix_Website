@@ -64,13 +64,13 @@ function CareerHeroIllustration({ sx, ...other }) {
             transform: 'translateX(-125px) rotate(-15deg)',
           }}
         >
-          <m.div style={{ y: offsetY(-50) }}>
+          <m.div>
             <Label
-              text="Accounting"
+              text="AI"
               icon={
                 <Image
                   alt="accounting"
-                  src="/assets/icons/ic_accounting.svg"
+                  src="https://cdn-icons-png.flaticon.com/128/5278/5278402.png"
                   sx={{ width: 48, height: 48 }}
                 />
               }
@@ -87,13 +87,13 @@ function CareerHeroIllustration({ sx, ...other }) {
           transform: 'translate(175px, 90px) rotate(15deg)',
         }}
       >
-        <m.div style={{ x: offsetX(80), y: offsetY(80) }}>
+        <m.div>
           <Label
-            text="Banking"
+            text="Mobile"
             icon={
               <Image
                 alt="banking"
-                src="/assets/icons/ic_banking_currency.svg"
+                src="https://cdn-icons-png.flaticon.com/128/9662/9662287.png"
                 sx={{ width: 48, height: 48 }}
               />
             }
@@ -108,13 +108,13 @@ function CareerHeroIllustration({ sx, ...other }) {
           transform: 'translate(170px, -110px) rotate(15deg)',
         }}
       >
-        <m.div style={{ y: offsetY(80) }}>
+        <m.div >
           <Label
-            text="Health Care"
+            text="ML"
             icon={
               <Image
                 alt="health care"
-                src="/assets/icons/ic_health_care.svg"
+                src="https://cdn-icons-png.flaticon.com/128/2980/2980560.png"
                 sx={{ width: 48, height: 48 }}
               />
             }
@@ -131,7 +131,7 @@ function CareerHeroIllustration({ sx, ...other }) {
           transform: 'translateX(-110px)',
         }}
       >
-        <m.div style={{ y: offsetY(-60) }}>
+        <m.div>
           <Label
             text="Software"
             icon={
@@ -147,7 +147,7 @@ function CareerHeroIllustration({ sx, ...other }) {
 
       {/* Icon */}
       <Box sx={{ position: 'absolute', top: 16, transform: 'translateX(20px)' }}>
-        <m.div style={{ x: offsetX(50), y: offsetY(50) }}>
+        <m.div>
           <Icon
             color={YELLOW}
             content={<SvgColor src="/assets/icons/ic_creativity.svg" sx={{ ...stylesIcon }} />}
@@ -157,7 +157,7 @@ function CareerHeroIllustration({ sx, ...other }) {
 
       {/* Icon */}
       <Box sx={{ position: 'absolute', bottom: 16, transform: 'translateX(40px)' }}>
-        <m.div style={{ x: offsetX(-60), y: offsetY(60) }}>
+        <m.div>
           <Icon
             color={GREEN}
             content={
@@ -175,7 +175,7 @@ function CareerHeroIllustration({ sx, ...other }) {
           transform: 'translateX(-220px)',
         }}
       >
-        <m.div style={{ x: offsetX(70), y: offsetY(70) }}>
+        <m.div >
           <Icon
             color={BLUE}
             content={

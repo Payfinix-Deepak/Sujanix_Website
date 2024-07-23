@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import HomeView from 'src/sections/Sujanix/HomeView';
+import HomeView from 'src/sections/Sujanix/HomeComponents/HomeView';
 
 // ----------------------------------------------------------------------
 
@@ -9,7 +9,7 @@ export default function Home() {
       <Helmet>
         <title> Home</title>
       </Helmet>
-      <HomeView />
+      <HomeView/>
     </>
   );
 }

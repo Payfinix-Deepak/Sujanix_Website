@@ -12,17 +12,11 @@ import { _mock } from 'src/_mock';
 import Iconify from 'src/components/iconify';
 import Player, { PlayerDialog } from 'src/components/player';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
-import { useState } from 'react';
 
 // ----------------------------------------------------------------------
 
 export default function PlayerView() {
   const videoOpen = useBoolean();
-  // const [playing, setPlaying] = useState(false);
-
-  // const handlePlayButtonClick = () => {
-  //   setPlaying(true);
-  // }
   return (
     <>
       {/* <Box
@@ -56,22 +50,6 @@ export default function PlayerView() {
               Open with Dialog
             </Fab>
           </Stack> */}
-           
-           {/* {!playing && (
-            <Fab
-              color="secondary"
-              sx={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                bgcolor: 'orange',
-              }}
-              onClick={handlePlayButtonClick}
-            >
-              <Iconify icon="carbon:play" width={24} />
-            </Fab>
-          )} */}
         </Box>
       </Container>
 
