@@ -14,7 +14,7 @@ import { useBoolean } from 'src/hooks/use-boolean';
 import Logo from 'src/components/logo';
 import Iconify from 'src/components/iconify';
 import Scrollbar from 'src/components/scrollbar';
-
+import sujanix_name from 'src/Images/sujanix_name.png'
 import NavList from './nav-list';
 import { NAV } from '../../../config-layout';
 
@@ -49,7 +49,7 @@ export default function NavMobile({ data }) {
         }}
       >
         <Scrollbar>
-          <Logo sx={{ mx: 2.5, my: 3 }} />
+        <img style={{ width: '160px ', height: '50px' }} src={sujanix_name} alt="logo" />
 
           <List component="nav" disablePadding>
             {data.map((list) => (
@@ -57,11 +57,7 @@ export default function NavMobile({ data }) {
             ))}
           </List>
 
-          <Stack spacing={1.5} sx={{ p: 3 }}>
-            <Button fullWidth variant="contained" color="inherit">
-              Buy Now
-            </Button>
-          </Stack>
+        
         </Scrollbar>
       </Drawer>
     </>

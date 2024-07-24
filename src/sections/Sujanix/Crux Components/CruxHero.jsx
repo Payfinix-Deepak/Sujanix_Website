@@ -18,7 +18,6 @@ import { bgGradient } from 'src/theme/css';
 
 import Iconify from 'src/components/iconify';
 import SvgColor from 'src/components/svg-color';
-import Crux from 'src/assets/data/Images2/Crux.jpg'
 
 // ----------------------------------------------------------------------
 

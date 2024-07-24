@@ -8,6 +8,7 @@ const CareerView = lazy(() => import('src/pages/Sujanix/Career'));
 const AboutView = lazy(() => import('src/pages/Sujanix/About'));
 const CruxView = lazy(() => import('src/pages/Sujanix/Crux'));
 const TruView = lazy(() => import('src/pages/Sujanix/TrueRead'));
+const CaseView = lazy(() => import('src/pages/Sujanix/CaseStudies'));
 
 // ----------------------------------------------------------------------
 
@@ -21,6 +22,7 @@ export const SujanixRoutes = [
       { path: '/Sujanix/About', element: <AboutView/> },
       { path: '/Sujanix/Crux', element: <CruxView/> },
       { path: '/Sujanix/TrueRead', element: <TruView/> },
+      { path: '/Sujanix/CaseStudies', element: <CaseView/> },
 
     ],
   },

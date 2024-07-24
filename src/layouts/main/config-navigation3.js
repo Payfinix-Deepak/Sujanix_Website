@@ -31,7 +31,7 @@
 export const ServiceLinks = [
   {
     order: '0',
-    subheader: 'Digital Transformation',
+    // subheader: 'Digital Transformation',
     // cover: Soft,
     items: [
       { title: 'Consulting', path: '' },
@@ -40,14 +40,6 @@ export const ServiceLinks = [
       { title: 'Digital Transformation', path: '' },
       { title: 'Technology Solutions', path: '' },
       { title: 'SDLC resources/Manpower', path: '' },
-    ],
-  },
-  {
-    order: '1',
-    subheader: 'Web & Software',
-    // cover: Digi,
-
-    items: [
       { title: 'Custom Software Development', path: '' },
       { title: 'Mobile App Development', path: '' },
       { title: 'Cloud Solutions', path: '' },
@@ -57,10 +49,16 @@ export const ServiceLinks = [
       { title: 'AI & Machine Learning', path: '' },
     ],
   },
+  // {
+  //   order: '1',
+  //   subheader: 'Web & Software',
+  //   // cover: Digi,
+
+  // },
 
   {
-    order: '2',
-    subheader: 'Products',
+    order: '1',
+    // subheader: 'Products',
     // cover: Solutions,
 
     items: [
@@ -92,17 +90,18 @@ export const IndustryLinks = [
       { title: 'Healthcare', path: '/HomeLanding/Web' },
       { title: 'Finance', path: '/HomeLanding/Dev' },
       { title: 'Retail', path: '/HomeLanding/Cus' },
-    ],
-  },
-  {
-    order: '1',
-
-    items: [
       { title: 'Manufacturing', path: '/HomeLanding/Web' },
       { title: 'Technology', path: '/HomeLanding/Dev' },
       { title: 'Government', path: '/HomeLanding/Cus' },
     ],
   },
+  // {
+  //   order: '1',
+
+  //   items: [
+     
+  //   ],
+  // },
 ];
 
 export const ResourceLinks = [
@@ -112,16 +111,18 @@ export const ResourceLinks = [
     items: [
       { title: 'Blog', path: '/HomeLanding/Web' },
       { title: 'Whitepapers', path: '/HomeLanding/Dev' },
-    ],
-  },
-  {
-    order: '1',
-
-    items: [
       { title: 'Webinars', path: '/HomeLanding/Web' },
       { title: 'FAQs', path: '/HomeLanding/Dev' },
     ],
   },
+  // {
+  //   order: '1',
+
+  //   items: [
+  //     { title: 'Webinars', path: '/HomeLanding/Web' },
+  //     { title: 'FAQs', path: '/HomeLanding/Dev' },
+  //   ],
+  // },
 ];
 
 export const PrivacyLinks = [
@@ -222,7 +223,7 @@ export const PrivacyLinks = [
 export const navConfig3 = [
   { title: 'Home', path: '/Sujanix' },
   {
-    title: 'About Us',
+    title: 'AboutUs',
     path: '/Sujanix/About',
     //  children: [AboutLinks[0], AboutLinks[1]]
   },
@@ -237,17 +238,22 @@ export const navConfig3 = [
   {
     title: 'Services',
     path: '',
-    children: [ServiceLinks[0], ServiceLinks[1], ServiceLinks[2]],
+    children: [ServiceLinks[0]],
+  },
+  {
+    title: 'Products',
+    path: '',
+    children: [ServiceLinks[1]],
   },
   {
     title: 'Industries',
     path: '',
-    children: [IndustryLinks[0], IndustryLinks[1]],
+    children: [IndustryLinks[0]],
   },
 
-  { title: 'Case Studies', path: '' },
-  { title: 'Resources', path: '', children: [ResourceLinks[0], ResourceLinks[1]] },
+  { title: 'CaseStudies', path: '/Sujanix/CaseStudies' },
+  { title: 'Resources', path: '', children: [ResourceLinks[0]] },
   { title: 'Careers', path: '/Sujanix/Career' },
-  { title: 'Contact Us', path: '/Sujanix/Contact' },
+  { title: 'ContactUs', path: '/Sujanix/Contact' },
   // { title: 'Privacy Policy', path: '', children: [PrivacyLinks[0], PrivacyLinks[1]] },
 ];

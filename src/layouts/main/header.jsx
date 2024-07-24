@@ -19,8 +19,7 @@ import { bgBlur } from 'src/theme/css';
 // import Logo from 'src/components/logo';
 // import Label from 'src/components/label';
 import { Link } from 'react-router-dom';
-import sujanix_name from 'src/Images/sujanix_name.png'
-
+import sujanix_name from 'src/Images/sujanix_name.png';
 import NavMobile from './nav/mobile';
 import NavDesktop from './nav/desktop';
 import { HEADER } from '../config-layout';
@@ -42,53 +41,24 @@ export default function Header({ headerOnDark }) {
 
   const renderContent = (
     <>
-      {/* <Box sx={{ lineHeight: 0, position: 'relative' }}>
-        <Logo />
-
-        <Link href="https://zone-docs.vercel.app/changelog" target="_blank" rel="noopener">
-          <Label
-            color="info"
-            sx={{
-              ml: 0.5,
-              px: 0.5,
-              top: -14,
-              left: 60,
-              height: 20,
-              fontSize: 11,
-              cursor: 'pointer',
-              position: 'absolute',
-            }}
-          >
-          v2.3.0
-          </Label>
-        </Link>
-      </Box> */}
-      <img
-
-      
-        style={{ width: '160px ', height: '50px'}}
-        src={sujanix_name}
-        alt="logo"
-      />
     
+      <img style={{ width: '160px ', height: '50px' }} src={sujanix_name} alt="logo" />
 
       {mdUp ? (
-        <Stack flexGrow={1} alignItems="center" sx={{ height: 1 }}>
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: 'flex',
+            justifyContent: 'flex-end', 
+          }}
+        >
           <NavDesktop data={navConfig3} />
-        </Stack>
+        </Box>
       ) : (
         <Box sx={{ flexGrow: 1 }} />
       )}
 
-      <Stack spacing={2} direction="row" alignItems="center" justifyContent="flex-end">
-        {/* <Stack spacing={1} direction="row" alignItems="center">
-          <Searchbar />
-
-          <SettingsButton />
-        </Stack> */}
-      </Stack>
-
-      {!mdUp && <NavMobile data={navConfig} />}
+      {!mdUp && <NavMobile data={navConfig3} />}
     </>
   );
 

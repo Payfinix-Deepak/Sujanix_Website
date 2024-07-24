@@ -33,10 +33,10 @@ export default function TravelAboutOurVision() {
       <Stack
         spacing={3}
         sx={{
-          maxWidth: 466,
+       
           mb: { xs: 8, md: 5 },
           mx: { xs: 'auto', md: 'unset' },
-          textAlign: { xs: 'center', md: 'left' },
+         textAlign:'center'
         }}
       >
         <Typography variant="h2">Our Mission</Typography>

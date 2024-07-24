@@ -1,23 +1,20 @@
 import PropTypes from 'prop-types';
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
 import Fade from '@mui/material/Fade';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
-import Portal from '@mui/material/Portal';
-import Grid from '@mui/material/Unstable_Grid2';
+import Popper from '@mui/material/Popper';
+import Grid from '@mui/material/Grid';
 import ListSubheader from '@mui/material/ListSubheader';
 
 import { usePathname } from 'src/routes/hooks';
-import { RouterLink } from 'src/routes/components';
 import { useActiveLink } from 'src/routes/hooks/use-active-link';
 
 import { useBoolean } from 'src/hooks/use-boolean';
 
 import Label from 'src/components/label';
-import Image from 'src/components/image';
 
 import NavItem from './nav-item';
 
@@ -25,16 +22,14 @@ import NavItem from './nav-item';
 
 export default function NavList({ data }) {
   const pathname = usePathname();
-
   const menuOpen = useBoolean();
-
   const active = useActiveLink(data.path, !!data.children);
-
   const mainList = data.children ? data.children.filter((list) => list.subheader !== 'Common') : [];
-
   const commonList = data.children
     ? data.children.find((list) => list.subheader === 'Common')
     : null;
+
+  const [anchorEl, setAnchorEl] = useState(null);
 
   useEffect(() => {
     if (menuOpen.value) {
@@ -43,73 +38,75 @@ export default function NavList({ data }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
-  const handleOpenMenu = useCallback(() => {
-    if (data.children) {
-      menuOpen.onTrue();
-    }
-  }, [data.children, menuOpen]);
+  const handleOpenMenu = useCallback(
+    (event) => {
+      if (data.children) {
+        setAnchorEl(event.currentTarget);
+        menuOpen.onTrue();
+      }
+    },
+    [data.children, menuOpen]
+  );
 
   return (
-    <>
+    <Box>
       <NavItem
         open={menuOpen.value}
         onMouseEnter={handleOpenMenu}
         onMouseLeave={menuOpen.onFalse}
-        //
         title={data.title}
         path={data.path}
-        //
         active={active}
         hasChild={!!data.children}
         externalLink={data.path.includes('http')}
       />
 
-      {!!data.children && menuOpen.value && (
-        <Portal>
-          <Fade in={menuOpen.value}>
+      <Popper
+        open={menuOpen.value}
+        anchorEl={anchorEl}
+        placement="bottom-start"
+        transition
+        onMouseEnter={menuOpen.onTrue}
+        onMouseLeave={menuOpen.onFalse}
+      >
+        {({ TransitionProps }) => (
+          <Fade {...TransitionProps}>
             <Paper
-              onMouseEnter={handleOpenMenu}
-              onMouseLeave={menuOpen.onFalse}
               sx={{
-                top: 62,
-                width: 1,
+                width: 'auto',
+                minWidth: 0,
+                maxWidth: 'fit-content',
                 borderRadius: 0,
-                position: 'fixed',
                 bgcolor: 'background.default',
                 zIndex: (theme) => theme.zIndex.modal,
                 boxShadow: (theme) => theme.customShadows.dialog,
+                marginTop: '0.5rem',
               }}
             >
-              <Grid container columns={9}>
-                <Grid xs={8}>
-                  <Box
-                    gap={5}
-                    display="grid"
-                    gridTemplateColumns="repeat(3, 1fr)"
-                    sx={{
-                      p: 5,
-                      height: 1,
-                      position: 'relative',
-                      bgcolor: 'background.neutral',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {mainList.map((list) => (
+              <Box
+                sx={{
+                  p: 2,
+                  bgcolor: '#fff',
+                  cursor: 'pointer',
+                }}
+              >
+                <Grid container spacing={2} direction="column">
+                  {mainList.map((list) => (
+                    <Grid item xs={12} key={list.subheader}>
                       <NavSubList
-                        key={list.subheader}
                         subheader={list.subheader}
                         items={list.items}
                         isNew={list.isNew}
                       />
-                    ))}
-                  </Box>
+                    </Grid>
+                  ))}
                 </Grid>
-              </Grid>
+              </Box>
             </Paper>
           </Fade>
-        </Portal>
-      )}
-    </>
+        )}
+      </Popper>
+    </Box>
   );
 }
 
@@ -122,59 +119,47 @@ NavList.propTypes = {
 function NavSubList({ subheader, isNew, items }) {
   const pathname = usePathname();
 
-  const coverPath = items.length ? items[0].path : '';
-
-  const commonList = subheader === 'Common';
-
   return (
-    <Stack spacing={2}>
-      <ListSubheader
-        sx={{
-          p: 0,
-          typography: 'h6',
-          color: 'text.primary',
-          bgcolor: 'transparent',
-        }}
-      >
-        {subheader}
-        {isNew && (
-          <Label color="info" sx={{ ml: 1 }}>
-            NEW
-          </Label>
-        )}
-      </ListSubheader>
+    <Grid container spacing={2} alignItems="flex-start">
+      <Grid item xs={12}>
+        <ListSubheader
+          sx={{
+            p: 0,
+            typography: 'h6',
+            color: 'text.primary',
+            bgcolor: 'transparent',
+          }}
+        >
+          {subheader}
+          {isNew && (
+            <Label color="info" sx={{ ml: 1 }}>
+              NEW
+            </Label>
+          )}
+        </ListSubheader>
+      </Grid>
+      <Grid item xs={12}>
+        <Stack
+          spacing={1.5}
+          alignItems="flex-start"
+          sx={{ flexDirection: 'column', flexWrap: 'wrap' }}
+        >
+          {items.map((item) => {
+            const active = pathname === item.path || pathname === `${item.path}/`;
 
-      {/* {!commonList && (
-          <Link component={RouterLink} href={coverPath}>
-            <Image
-              disabledEffect
-              alt={cover}
-              src={cover || '/assets/placeholder.svg'}
-              ratio="16/9"
-              sx={{
-                borderRadius: 1,
-                cursor: 'pointer',
-                boxShadow: (theme) => theme.customShadows.z8,
-                transition: (theme) => theme.transitions.create('all'),
-                '&:hover': {
-                  opacity: 0.8,
-                  boxShadow: (theme) => theme.customShadows.z24,
-                },
-              }}
-            />
-          </Link>
-        )} */}
-
-      <Stack spacing={1.5} alignItems="flex-start">
-        {items.map((item) => {
-          const active = pathname === item.path || pathname === `${item.path}/`;
-
-          return (
-            <NavItem key={item.title} title={item.title} path={item.path} active={active} subItem />
-          );
-        })}
-      </Stack>
-    </Stack>
+            return (
+              <NavItem
+                key={item.title}
+                title={item.title}
+                path={item.path}
+                active={active}
+                subItem
+              />
+            );
+          })}
+        </Stack>
+      </Grid>
+    </Grid>
   );
 }
 

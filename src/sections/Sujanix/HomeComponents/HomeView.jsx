@@ -6,6 +6,7 @@ import { _testimonials } from 'src/_mock';
 import MarketingLandingFreeSEO from 'src/sections/_marketing/landing/marketing-landing-free-seo';
 import EcommerceLandingCategories from 'src/sections/_ecommerce/landing/ecommerce-landing-categories';
 import Hero from './Hero';
+import LatestNews from './LatestNews';
 
 
 export default function HomeView() {
@@ -91,6 +92,7 @@ export default function HomeView() {
      <ElearningCourseDetailsTeachersInfo teachers={teach}/> 
       <EcommerceLandingCategories/>
       <MarketingTestimonial testimonials={_testimonials}/>
+      <LatestNews/>
       <MarketingLandingFreeSEO/> 
       <Footer/>
     </>

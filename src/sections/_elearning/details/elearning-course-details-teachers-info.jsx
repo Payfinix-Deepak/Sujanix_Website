@@ -66,7 +66,7 @@ function TeacherItem({ teacher }) {
   sx={{ 
     width: { xs: '100%', sm: '75%', md: '50%', lg: '35%' }, // Responsive width
     height: { xs: '100px', sm: '150px', md: '200px', lg: '220px' }, // Responsive height
-    marginTop: "-5rem",
+    marginTop: "-4rem",
     bgcolor: 'primary.main',
   }} 
 />
