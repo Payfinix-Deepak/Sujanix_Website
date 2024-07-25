@@ -2,8 +2,6 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import List from '@mui/material/List';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 
@@ -11,10 +9,11 @@ import { usePathname } from 'src/routes/hooks';
 
 import { useBoolean } from 'src/hooks/use-boolean';
 
-import Logo from 'src/components/logo';
+import sujanix_name from 'src/Images/sujanix_name.png'
+
 import Iconify from 'src/components/iconify';
 import Scrollbar from 'src/components/scrollbar';
-import sujanix_name from 'src/Images/sujanix_name.png'
+
 import NavList from './nav-list';
 import { NAV } from '../../../config-layout';
 
@@ -49,7 +48,7 @@ export default function NavMobile({ data }) {
         }}
       >
         <Scrollbar>
-        <img style={{ width: '160px ', height: '50px' }} src={sujanix_name} alt="logo" />
+        <img style={{ width: '150px ', height: '40px',margin:'1rem' }} src={sujanix_name} alt="logo" />
 
           <List component="nav" disablePadding>
             {data.map((list) => (

@@ -113,6 +113,8 @@ export const ResourceLinks = [
       { title: 'Whitepapers', path: '/HomeLanding/Dev' },
       { title: 'Webinars', path: '/HomeLanding/Web' },
       { title: 'FAQs', path: '/HomeLanding/Dev' },
+      { title: 'CaseStudies', path: '/Sujanix/CaseStudies' },
+
     ],
   },
   // {
@@ -251,7 +253,6 @@ export const navConfig3 = [
     children: [IndustryLinks[0]],
   },
 
-  { title: 'CaseStudies', path: '/Sujanix/CaseStudies' },
   { title: 'Resources', path: '', children: [ResourceLinks[0]] },
   { title: 'Careers', path: '/Sujanix/Career' },
   { title: 'ContactUs', path: '/Sujanix/Contact' },

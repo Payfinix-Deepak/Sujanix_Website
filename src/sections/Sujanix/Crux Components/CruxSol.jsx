@@ -7,9 +7,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
 
-import { _products } from 'src/_mock';
 
-import Iconify from 'src/components/iconify';
 
 
 // ----------------------------------------------------------------------

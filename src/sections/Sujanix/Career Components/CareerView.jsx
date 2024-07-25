@@ -1,6 +1,7 @@
 import Footer from "src/layouts/main/footer";
 import Header from "src/layouts/main/header";
 import CareerLandingPage from "src/pages/career/landing";
+
 import TravelLandingToursByCity from "src/sections/_travel/landing/travel-landing-tours-by-city";
 
 export default function CareerView(){

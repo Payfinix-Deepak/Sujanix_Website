@@ -1,49 +1,14 @@
-// import Link from '@mui/material/Link';
-// import Stack from '@mui/material/Stack';
-// import Divider from '@mui/material/Divider';
+import { Stack } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
-// import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
-import { styled } from '@mui/material/styles';
-import { _socials, _offices, _mock } from 'src/_mock';
-
-// import ContactMap from 'src/components/map';
-import { Stack } from '@mui/material';
 import Iconify from 'src/components/iconify';
-// import { color } from '@mui/system';
+
 import MapMarkersPopups from 'src/sections/Sujanix/MapView/map-markers-popups';
-// import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
-
-// const countries = [
-//   {
-//     timezones: ['America/Aruba'],
-//     latlng: [12.5, -69.96666666],
-//     name: 'Aruba',
-//     country_code: 'AW',
-//     capital: 'Oranjestad',
-//     photoUrl:
-//       'https://img.freepik.com/free-photo/cloud-computing-banner-background-smart-city_53876-108504.jpg?t=st=1718950399~exp=1718953999~hmac=0898184437d8c9504bb5b7bb93e76b642803d5fa8240666502d4d8efacf82b0c&w=996',
-//   },
-// ];
-
-// const THEMES = {
-//   streets: 'mapbox://styles/mapbox/streets-v11',
-//   outdoors: 'mapbox://styles/mapbox/outdoors-v11',
-//   light: 'mapbox://styles/mapbox/light-v10',
-//   dark: 'mapbox://styles/mapbox/dark-v10',
-//   satellite: 'mapbox://styles/mapbox/satellite-streets-v12',
-//   satelliteStreets: 'mapbox://styles/mapbox/satellite-streets-v11',
-// };
-
-// const baseSettings = {
-//   mapboxAccessToken:
-//     'pk.eyJ1Ijoia3VtYXJzYW5qZWV2ZHV0dCIsImEiOiJjbGQ4aTJjYjgwcDIzM3FwYjU0a3ZvaTk5In0.mPZrYwIN2FKvpG3H97EPZg',
-//   minZoom: 1,
-// };
 
 const StyledMapContainer = styled('div')(({ theme }) => ({
   zIndex: 0,

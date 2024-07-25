@@ -1,18 +1,12 @@
-import Fab from '@mui/material/Fab';
 import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
+import { Grid } from '@mui/material';
 import Container from '@mui/material/Container';
-
-import { paths } from 'src/routes/paths';
 
 import { useBoolean } from 'src/hooks/use-boolean';
 
 import { _mock } from 'src/_mock';
 
-import Iconify from 'src/components/iconify';
 import Player, { PlayerDialog } from 'src/components/player';
-import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
-import { Grid } from '@mui/material';
 
 // ----------------------------------------------------------------------
 

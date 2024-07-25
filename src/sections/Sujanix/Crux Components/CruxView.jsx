@@ -1,14 +1,17 @@
-import Header from "src/layouts/main/header";
 import { Container, Typography } from "@mui/material";
-import PlayerView from "src/sections/examples/player-view";
+
+import Header from "src/layouts/main/header";
 import Footer from "src/layouts/main/footer";
+
+import PlayerView from "src/sections/examples/player-view";
 import MarketingLandingFreeSEO from "src/sections/_marketing/landing/marketing-landing-free-seo";
+
+import CruxSol from "./CruxSol";
 import CruxHero from "./CruxHero";
+import CruxFeau from "./CruxFeau";
+import CruxFaqs from "./CruxFaqs";
 import CSection1 from "./CSection1";
 import CSection2 from "./CSection2";
-import CruxFeau from "./CruxFeau";
-import CruxSol from "./CruxSol";
-import CruxFaqs from "./CruxFaqs";
 
 
 export default function CruxView() {

@@ -1,26 +1,21 @@
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
-import Avatar from '@mui/material/Avatar';
+import { Container} from '@mui/material';
 import Typography from '@mui/material/Typography';
-import { Link, NavLink } from 'react-router-dom';
-import { Container, Grid } from '@mui/material';
+
 import SvgColor from 'src/components/svg-color';
 
-// import { fShortenNumber } from 'src/utils/format-number';
 
-// import Iconify from 'src/components/iconify';
-// import { Button } from '@mui/material';
-// import { RouterLink } from 'src/routes/components';
-// import { paths } from 'src/routes/paths';
 
 // ----------------------------------------------------------------------
 
 export default function ElearningCourseDetailsTeachersInfo({ teachers = [] }) {
   return (
-    <>
+  
       <Container>
         <Stack sx={{textAlign:"center"}}>
         <Typography variant="h2" sx={{ mb: 5, marginTop: "5rem" }}>
@@ -47,7 +42,7 @@ export default function ElearningCourseDetailsTeachersInfo({ teachers = [] }) {
         </Box>
       </Container>
 
-    </>
+
   );
 }
 

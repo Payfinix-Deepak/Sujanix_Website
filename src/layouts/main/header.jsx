@@ -1,34 +1,22 @@
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
-// import Link from '@mui/material/Link';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import { useTheme } from '@mui/material/styles';
 
-import { paths } from 'src/routes/paths';
-
 import { useResponsive } from 'src/hooks/use-responsive';
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
 
 import { bgBlur } from 'src/theme/css';
-
-// import Logo from 'src/components/logo';
-// import Label from 'src/components/label';
-import { Link } from 'react-router-dom';
 import sujanix_name from 'src/Images/sujanix_name.png';
+
 import NavMobile from './nav/mobile';
 import NavDesktop from './nav/desktop';
 import { HEADER } from '../config-layout';
-// import Searchbar from '../common/searchbar';
-import { navConfig } from './config-navigation';
-import HeaderShadow from '../common/header-shadow';
-import { navConfig2 } from './config-navigation2';
 import { navConfig3 } from './config-navigation3';
-// import SettingsButton from '../common/settings-button';
+import HeaderShadow from '../common/header-shadow';
 
 // ----------------------------------------------------------------------
 
@@ -41,7 +29,6 @@ export default function Header({ headerOnDark }) {
 
   const renderContent = (
     <>
-    
       <img style={{ width: '160px ', height: '50px' }} src={sujanix_name} alt="logo" />
 
       {mdUp ? (
@@ -49,7 +36,8 @@ export default function Header({ headerOnDark }) {
           sx={{
             flexGrow: 1,
             display: 'flex',
-            justifyContent: 'flex-end', 
+            justifyContent: 'flex-end',
+            marginLeft: '30rem',
           }}
         >
           <NavDesktop data={navConfig3} />

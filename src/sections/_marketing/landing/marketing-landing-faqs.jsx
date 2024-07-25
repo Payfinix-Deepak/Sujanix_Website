@@ -10,10 +10,10 @@ import AccordionSummary, { accordionSummaryClasses } from '@mui/material/Accordi
 
 import { useResponsive } from 'src/hooks/use-responsive';
 
+import { _faqsSecurity } from 'src/_mock';
 
 import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
-import { _faqsSecurity } from 'src/_mock';
 
 // ----------------------------------------------------------------------
 

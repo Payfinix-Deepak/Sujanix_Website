@@ -1,19 +1,11 @@
 import PropTypes from 'prop-types';
-import { useState, useCallback } from 'react';
 
 import Card from '@mui/material/Card';
-import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
-import Checkbox from '@mui/material/Checkbox';
-import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
-import { paths } from 'src/routes/paths';
-import { RouterLink } from 'src/routes/components';
-
 import { fDate } from 'src/utils/format-time';
-import { fCurrency } from 'src/utils/format-number';
 
 import Label from 'src/components/label';
 import Image from 'src/components/image';
@@ -23,14 +15,12 @@ import TextMaxLine from 'src/components/text-max-line';
 // ----------------------------------------------------------------------
 
 export default function CareerJobItem({ job }) {
-  const { slug, type, level, salary, location, urgent, createdAt, favorited, experience, company } =
+  const { slug, location, urgent, createdAt, company } =
     job;
 
-  const [favorite, setFavorite] = useState(favorited);
+ 
 
-  const handleChangeFavorite = useCallback((event) => {
-    setFavorite(event.target.checked);
-  }, []);
+
 
   return (
     <Card

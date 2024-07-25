@@ -1,9 +1,9 @@
-import { Card, Container, Stack, Typography, Grid, TextField } from "@mui/material";
+import { Card,Grid, Stack, Container, TextField, Typography } from "@mui/material";
 
 
 export default function ContactForm() {
     return (
-        <>
+     
             <main className="bg" style={{ padding: "9rem" }}>
 
                 <Container>
@@ -128,6 +128,6 @@ export default function ContactForm() {
                     </Grid>
                 </Container>
             </main>
-        </>
+        
     )
 }

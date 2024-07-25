@@ -3,13 +3,10 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import Stack from '@mui/material/Stack';
-
 import LoadingButton from '@mui/lab/LoadingButton';
 import FormHelperText from '@mui/material/FormHelperText';
 
-import { _tags } from 'src/_mock';
-
-import FormProvider, { RHFSlider, RHFTextField } from 'src/components/hook-form';
+import FormProvider, { RHFTextField } from 'src/components/hook-form';
 
 // ----------------------------------------------------------------------
 
@@ -53,10 +50,8 @@ export default function MarketingContactForm() {
     }
   });
 
-  const getSelected = (selectedItems, item) =>
-    selectedItems.includes(item)
-      ? selectedItems.filter((value) => value !== item)
-      : [...selectedItems, item];
+ 
+
 
   return (
     <FormProvider methods={methods} onSubmit={onSubmit}>

@@ -1,9 +1,9 @@
 import { Masonry } from "@mui/lab";
-import { Card, Container, Stack, Typography } from "@mui/material";
+import { Card, Stack, Container, Typography } from "@mui/material";
 
 export default function Sec11() {
     return (
-        <>
+      
             <main style={{ paddingTop: "5rem", paddingBottom: "2rem", marginBottom: "7rem" }}>
                 <Container>
                     <Typography variant="h3" style={{ marginLeft: "25rem" }}>
@@ -72,6 +72,6 @@ export default function Sec11() {
                 </Container>
 
             </main>
-        </>
+        
     )
 }

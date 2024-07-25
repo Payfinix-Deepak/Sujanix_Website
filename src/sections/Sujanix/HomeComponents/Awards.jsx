@@ -1,9 +1,9 @@
 
-import { Container, Grid, Stack, Typography } from "@mui/material";
+import {Grid,Stack, Container,   Typography } from "@mui/material";
 
 export default function Awards() {
     return (
-        <>
+        
             <main style={{ padding: "5rem", textAlign: "center" }}>
                 <Container>
 
@@ -59,6 +59,6 @@ export default function Awards() {
                     </Grid>
                 </Container>
             </main>
-        </>
+      
     )
 }

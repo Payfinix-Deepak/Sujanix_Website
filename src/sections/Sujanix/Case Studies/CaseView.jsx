@@ -4,10 +4,12 @@ import Typography from '@mui/material/Typography';
 
 // import MarketingNewsletter from '../marketing-newsletter';
 // import MarketingCaseStudyList from '../list/marketing-case-study-list';
-import MarketingTestimonial from 'src/sections/_marketing/testimonial/marketing-testimonial';
 import { _testimonials } from 'src/_mock';
 import Header from 'src/layouts/main/header';
 import Footer from 'src/layouts/main/footer';
+
+import MarketingTestimonial from 'src/sections/_marketing/testimonial/marketing-testimonial';
+
 import CaseCards from './CaseCards';
 
 // ----------------------------------------------------------------------
@@ -24,7 +26,7 @@ export default function CaseView() {
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
-          <Typography sx={{ textAlign: 'center', marginTop: '2rem' }} variant="h2">
+          <Typography sx={{ textAlign: 'center',marginTop:'6rem'}} variant="h2">
             {' '}
             Case Studies
           </Typography>

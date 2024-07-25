@@ -1,10 +1,12 @@
+import { _testimonials } from 'src/_mock';
 import Footer from 'src/layouts/main/footer';
 import Header from 'src/layouts/main/header';
-import ElearningCourseDetailsTeachersInfo from 'src/sections/_elearning/details/elearning-course-details-teachers-info';
+
 import MarketingTestimonial from 'src/sections/_marketing/testimonial/marketing-testimonial';
-import { _testimonials } from 'src/_mock';
 import MarketingLandingFreeSEO from 'src/sections/_marketing/landing/marketing-landing-free-seo';
 import EcommerceLandingCategories from 'src/sections/_ecommerce/landing/ecommerce-landing-categories';
+import ElearningCourseDetailsTeachersInfo from 'src/sections/_elearning/details/elearning-course-details-teachers-info';
+
 import Hero from './Hero';
 import LatestNews from './LatestNews';
 

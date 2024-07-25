@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 
 import Image from 'src/components/image';
 import TextMaxLine from 'src/components/text-max-line';
-import { Button } from '@mui/material';
 
 // ----------------------------------------------------------------------
 

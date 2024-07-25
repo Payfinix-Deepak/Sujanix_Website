@@ -2,18 +2,14 @@ import { m } from 'framer-motion';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
-
+import { Button } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import { _offices } from 'src/_mock';
-
 import Image from 'src/components/image';
-
 import { varHover, varTranHover } from 'src/components/animate';
-import { Button } from '@mui/material';
 
 
 // ----------------------------------------------------------------------

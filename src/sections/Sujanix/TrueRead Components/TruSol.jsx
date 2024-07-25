@@ -7,9 +7,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
 
-import { _products } from 'src/_mock';
 
-import Iconify from 'src/components/iconify';
 
 
 // ----------------------------------------------------------------------
@@ -121,37 +119,6 @@ export default function TruSol() {
 
             </Grid>
 
-            {/* <Grid container spacing={4}>
-                <Grid xs={12} md={4}>
-                    <BrandInfo
-                        logo={<Iconify icon="arcticons:fashion-arena-fashion-club" width={40} />}
-                        name="Fashion"
-                        description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes"
-                        path="#"
-                        sx={{ height: 1 }}
-                    />
-                </Grid>
-                <Grid xs={12} md={4}>
-                    <BrandInfo
-                        logo={<Iconify icon="fluent-mdl2:education" width={40} />}
-                        name="Education"
-                        description="Enhance student engagement and comprehension across a range of courses by facilitating immersive learning experiences through the use of virtual field trips, interactive simulations, and 3D models."
-                        path="#"
-                        sx={{ height: 1 }}
-                    />
-                </Grid>
-                <Grid xs={12} md={4}>
-                    <BrandInfo
-                        logo={<Iconify icon="fluent:design-ideas-24-regular" width={40} />}
-                        name="Interior Design"
-                        description="Design professionals and clients can experiment with various furniture configurations, color schemes, and layouts prior to execution by using virtual reality to visualize and personalize interior spaces."
-                        path="#"
-                        sx={{ height: 1 }}
-                    />
-                </Grid>
-
-
-            </Grid> */}
         </Container>
     );
 }

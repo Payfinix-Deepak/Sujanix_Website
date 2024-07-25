@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import Map, { Source, Layer } from 'react-map-gl';
+import Map, { Layer,Source  } from 'react-map-gl';
 
 import NavigationIcon from 'src/assets/data/location-pin.png';
 

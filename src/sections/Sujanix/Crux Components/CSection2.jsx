@@ -1,15 +1,9 @@
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
-import { paths } from 'src/routes/paths';
-import { RouterLink } from 'src/routes/components';
-
 import Image from 'src/components/image';
-import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
@@ -40,7 +34,10 @@ export default function CSection2() {
         </Grid>
 
         <Grid xs={12} md={6} lg={5}>
-          <Image alt="services" src="https://img.freepik.com/free-vector/it-managers-integrate-technologies-into-business-operations-enterprise-it-management-it-software-solutions-enterprise-architecture-concept-illustration_335657-2376.jpg?size=626&ext=jpg&ga=GA1.1.157902740.1710857977&semt=ais_user" />
+          <Image
+            alt="services"
+            src="https://img.freepik.com/free-vector/it-managers-integrate-technologies-into-business-operations-enterprise-it-management-it-software-solutions-enterprise-architecture-concept-illustration_335657-2376.jpg?size=626&ext=jpg&ga=GA1.1.157902740.1710857977&semt=ais_user"
+          />
         </Grid>
       </Grid>
     </Container>

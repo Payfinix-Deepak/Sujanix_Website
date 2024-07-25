@@ -1,7 +1,5 @@
 import Box from '@mui/material/Box';
-import Fab from '@mui/material/Fab';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -12,7 +10,6 @@ import { useResponsive } from 'src/hooks/use-responsive';
 import { bgGradient } from 'src/theme/css';
 
 import Image from 'src/components/image';
-import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
