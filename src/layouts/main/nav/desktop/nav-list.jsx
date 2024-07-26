@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import { useEffect, useCallback, useState } from 'react';
+import { useState, useEffect,useCallback } from 'react';
 
 import Box from '@mui/material/Box';
 import Fade from '@mui/material/Fade';
+import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
-import Grid from '@mui/material/Grid';
 import ListSubheader from '@mui/material/ListSubheader';
 
 import { usePathname } from 'src/routes/hooks';
@@ -25,9 +25,7 @@ export default function NavList({ data }) {
   const menuOpen = useBoolean();
   const active = useActiveLink(data.path, !!data.children);
   const mainList = data.children ? data.children.filter((list) => list.subheader !== 'Common') : [];
-  const commonList = data.children
-    ? data.children.find((list) => list.subheader === 'Common')
-    : null;
+ 
 
   const [anchorEl, setAnchorEl] = useState(null);
 

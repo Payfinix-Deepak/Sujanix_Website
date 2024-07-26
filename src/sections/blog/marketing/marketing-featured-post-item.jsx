@@ -1,15 +1,10 @@
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 import Stack from '@mui/material/Stack';
-// import Avatar from '@mui/material/Avatar';
-
-// import { fDate } from 'src/utils/format-time';
+import { Typography } from '@mui/material';
 
 import Image from 'src/components/image';
-
-// import PostTimeBlock from '../common/post-time-block';
-import { Typography } from '@mui/material';
-import { NavLink } from 'react-router-dom';
 import TextMaxLine from 'src/components/text-max-line';
 
 // ----------------------------------------------------------------------

@@ -29,7 +29,7 @@ const stylesIcon = {
 function CareerHeroIllustration({ sx, ...other }) {
   const theme = useTheme();
 
-  const { offsetX, offsetY, onMouseMoveHandler, onMouseLeaveHandler } = useHoverParallax();
+  const {  onMouseMoveHandler, onMouseLeaveHandler } = useHoverParallax();
 
   const BLUE = theme.palette.info.main;
 

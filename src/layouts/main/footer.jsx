@@ -21,10 +21,11 @@ import { useBoolean } from 'src/hooks/use-boolean';
 import { useResponsive } from 'src/hooks/use-responsive';
 
 import { _socials } from 'src/_mock';
+import sujanix_name from 'src/Images/sujanix_name.png';
 
 import Logo from 'src/components/logo';
 import Iconify from 'src/components/iconify';
-import sujanix_name from 'src/Images/sujanix_name.png';
+
 import { pageLinks, navConfig } from './config-navigation';
 
 // ----------------------------------------------------------------------

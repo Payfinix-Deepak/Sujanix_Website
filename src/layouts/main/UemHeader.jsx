@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
-// import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
@@ -14,16 +13,11 @@ import { useOffSetTop } from 'src/hooks/use-off-set-top';
 
 import { bgBlur } from 'src/theme/css';
 
-// import Logo from 'src/components/logo';
-// import Label from 'src/components/label';
-import { Link, NavLink } from 'react-router-dom';
-
 import NavMobile from './nav/mobile';
 import NavDesktop from './nav/desktop';
 import { HEADER } from '../config-layout';
-// import Searchbar from '../common/searchbar';
-import HeaderShadow from '../common/header-shadow';
 import { navConfig3 } from './config-navigation3';
+import HeaderShadow from '../common/header-shadow';
 
 // import SettingsButton from '../common/settings-button';
 

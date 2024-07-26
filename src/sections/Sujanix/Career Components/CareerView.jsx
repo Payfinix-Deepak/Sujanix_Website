@@ -1,3 +1,4 @@
+import Head2 from "src/layouts/main/head2";
 import Footer from "src/layouts/main/footer";
 import Header from "src/layouts/main/header";
 import CareerLandingPage from "src/pages/career/landing";
@@ -70,7 +71,10 @@ export default function CareerView(){
     return(
 
     <>
-    <Header/><br/><br/><br/>
+    
+    <Header/><br/>
+    <Head2/>
+    <br/><br/>
     <CareerLandingPage/>
     <TravelLandingToursByCity tours={Perks}/>
     <Footer/>

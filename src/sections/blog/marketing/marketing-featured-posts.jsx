@@ -2,17 +2,15 @@ import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { alpha, useTheme } from '@mui/material/styles';
 
 // import Image from 'src/components/image';
 import Carousel, { useCarousel, CarouselDots, CarouselArrows } from 'src/components/carousel';
-import { Typography } from '@mui/material';
+
 import MarketingFeaturedPostItem from './marketing-featured-post-item';
 
 // ----------------------------------------------------------------------
 
 export default function MarketingFeaturedPosts({ posts }) {
-  const theme = useTheme();
 
   const carousel = useCarousel({
     slidesToShow: 1,

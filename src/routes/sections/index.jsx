@@ -10,11 +10,11 @@ import { errorRoutes } from './error';
 import { commonRoutes } from './common';
 import { careerRoutes } from './career';
 import { travelRoutes } from './travel';
+import { SujanixRoutes } from './Sujanix';
 import { marketingRoutes } from './marketing';
 import { eLearningRoutes } from './elearning';
 import { eCommerceRoutes } from './ecommerce';
 import { componentsRoutes } from './components';
-import { SujanixRoutes } from './Sujanix';
 
 // ----------------------------------------------------------------------
 
